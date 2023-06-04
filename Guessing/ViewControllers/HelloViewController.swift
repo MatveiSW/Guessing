@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  HelloViewController.swift
 //  Guessing
 //
 //  Created by Матвей Авдеев on 04.06.2023.
@@ -7,13 +7,15 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class HelloViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
 
+        
+    }
+    
+
+   
 
 }
-

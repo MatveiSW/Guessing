@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dud-gr-3xr">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Item-->
+        <scene sceneID="nXl-uH-NAe">
+            <objects>
+                <viewController id="Xsk-5s-Hoc" customClass="OneRulesViewController" customModule="Guessing" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tYi-cY-BjE">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Правила первой игры" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8cR-Ir-VQA">
+                                <rect key="frame" x="74" y="164" width="244" height="147"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="nGz-XD-daY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="epZ-xz-PB2"/>
+                    <navigationItem key="navigationItem" id="bxE-M2-nb2"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H26-b2-S3C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-989" y="1496"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="uNg-kT-QW3">
+            <objects>
+                <viewController id="KL9-JU-C7l" customClass="OneGameViewController" customModule="Guessing" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MZ1-X6-7KD">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Первая игра" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sSd-o8-SkO">
+                                <rect key="frame" x="84" y="191" width="225" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="aLR-Tz-2zS"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="Aov-Rk-sCc"/>
+                    <connections>
+                        <segue destination="5sS-dw-2MJ" kind="presentation" identifier="goOneResult" id="YMa-xo-rvQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Egi-Mq-tc2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-167" y="1496"/>
+        </scene>
+        <!--Hello View Controller-->
+        <scene sceneID="xqJ-QV-8lM">
+            <objects>
+                <viewController id="WZH-pT-Eka" customClass="HelloViewController" customModule="Guessing" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="N66-3s-QTE">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="04g-kf-3sS">
+                                <rect key="frame" x="125" y="535" width="143" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Начать играть!">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="31"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="Ezx-rJ-nsA" kind="show" id="49y-6r-jzJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ANj-et-SAx"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="CiH-GN-zC1">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="aXG-wo-ly9">
+                            <connections>
+                                <segue destination="CR4-tL-D2s" kind="show" id="JSk-mQ-xVr"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hud-WG-o1r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1052.6717557251909" y="-727.46478873239437"/>
+        </scene>
+        <!--People Info View Controller-->
+        <scene sceneID="cjK-5p-GqM">
+            <objects>
+                <viewController id="CR4-tL-D2s" customClass="PeopleInfoViewController" customModule="Guessing" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="z01-Xt-Zq1">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Разработчики" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S94-Ve-idX">
+                                <rect key="frame" x="69" y="222" width="254" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="G7p-di-MGN"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="8OJ-fo-YRe"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PHf-6p-DZI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1994.6564885496182" y="-727.46478873239437"/>
+        </scene>
+        <!--Game List View Controller-->
+        <scene sceneID="aED-Uw-ukL">
+            <objects>
+                <tableViewController id="Ezx-rJ-nsA" customClass="GameListViewController" customModule="Guessing" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Xp7-Ef-n4f">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="games" id="xE4-sX-PzU">
+                                <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xE4-sX-PzU" id="pW0-RC-aDy">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Ezx-rJ-nsA" id="EZH-gn-Rzk"/>
+                            <outlet property="delegate" destination="Ezx-rJ-nsA" id="9rV-N0-cGt"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="K8f-xn-p3y"/>
+                    <connections>
+                        <segue destination="2fk-CN-h19" kind="show" identifier="oneGame" id="qOx-UL-hds"/>
+                        <segue destination="9VT-J8-UpB" kind="show" identifier="twoGame" id="hOo-oM-PPW"/>
+                        <segue destination="5dv-Sy-IG4" kind="show" identifier="threeGame" id="I7z-ui-sDV"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fjm-78-uR4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1056" y="2"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="fFP-jb-qlo">
+            <objects>
+                <viewController id="ph0-CK-4u4" customClass="TwoRulesViewController" customModule="Guessing" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fgf-5L-nHq">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Правила второй игры" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bYs-L0-e5J">
+                                <rect key="frame" x="86" y="150" width="220" height="190"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="XVQ-Pd-f7V"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="ZRc-Wo-XOG"/>
+                    <navigationItem key="navigationItem" id="lmO-8h-YX3"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Pd-jI-ejn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="673" y="1496"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="ku5-ZP-93h">
+            <objects>
+                <viewController id="tQz-Hl-rH6" customClass="ThreeRulesViewController" customModule="Guessing" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="e1X-k4-oJz">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Правила третий игры" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Cf-ST-3hP">
+                                <rect key="frame" x="16" y="248" width="277" height="23"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="yFP-Kf-bUi"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5Cf-ST-3hP" firstAttribute="leading" secondItem="yFP-Kf-bUi" secondAttribute="leading" constant="16" id="46S-fu-jU0"/>
+                            <constraint firstItem="5Cf-ST-3hP" firstAttribute="top" secondItem="yFP-Kf-bUi" secondAttribute="top" constant="145" id="QdV-3Q-6pT"/>
+                            <constraint firstItem="yFP-Kf-bUi" firstAttribute="trailing" secondItem="5Cf-ST-3hP" secondAttribute="trailing" constant="100" id="d9q-GS-URj"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="XuG-MW-xse"/>
+                    <navigationItem key="navigationItem" id="E59-al-lxq"/>
+                    <connections>
+                        <outlet property="rulesGameLabel" destination="5Cf-ST-3hP" id="zCn-Cr-SbC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="byh-i6-Hac" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2295" y="1496"/>
+        </scene>
+        <!--One Tab Bar Controller-->
+        <scene sceneID="KyF-uw-WIj">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="2fk-CN-h19" customClass="OneTabBarController" customModule="Guessing" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="fyw-Iz-eJN"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="TPN-8G-JzD">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Xsk-5s-Hoc" kind="relationship" relationship="viewControllers" id="Ju9-cw-SBI"/>
+                        <segue destination="KL9-JU-C7l" kind="relationship" relationship="viewControllers" id="ULS-1E-ovc"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GK8-9q-k7V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-550" y="770"/>
+        </scene>
+        <!--Two Tab Bar Cotroller-->
+        <scene sceneID="eII-SL-yow">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="9VT-J8-UpB" customClass="TwoTabBarCotroller" customModule="Guessing" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="KUG-r3-lXZ"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cfs-58-I1f">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="ph0-CK-4u4" kind="relationship" relationship="viewControllers" id="7Wq-41-Bam"/>
+                        <segue destination="C7Y-vK-OZ0" kind="relationship" relationship="viewControllers" id="YZi-nR-LPw"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hTU-mk-cwu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1057" y="770"/>
+        </scene>
+        <!--Three Tab Bar Controller-->
+        <scene sceneID="tg8-rk-MRH">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="5dv-Sy-IG4" customClass="ThreeTabBarController" customModule="Guessing" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="qWu-nk-Wif"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HqR-ot-6rs">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="tQz-Hl-rH6" kind="relationship" relationship="viewControllers" id="Gbd-eg-W3a"/>
+                        <segue destination="xQV-iW-LH8" kind="relationship" relationship="viewControllers" id="Gtz-2X-hAy"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V6V-70-a1x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2692" y="770"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="56B-hn-gg3">
+            <objects>
+                <viewController id="C7Y-vK-OZ0" customClass="TwoGameViewController" customModule="Guessing" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="v4f-0z-Nfv">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Вторая игра" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mqy-m0-1za">
+                                <rect key="frame" x="84" y="191" width="220" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="OSf-2g-DLe"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="W8h-Oa-iGp"/>
+                    <connections>
+                        <segue destination="5sS-dw-2MJ" kind="presentation" identifier="goTwoResult" id="Qs1-oV-1aj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AkR-Hz-ml4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1462" y="1496"/>
+        </scene>
+        <!--Result View Controller-->
+        <scene sceneID="aLe-LT-qRa">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="5sS-dw-2MJ" customClass="ResultViewController" customModule="Guessing" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CCM-nU-ech">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Результаты игры" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fb4-qa-NyR">
+                                <rect key="frame" x="46" y="135" width="301" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Aev-LZ-VgJ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="jhE-a9-35P"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ndA-fO-KPY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1055.7251908396945" y="2353.5211267605637"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="OE9-CM-g9C">
+            <objects>
+                <viewController id="xQV-iW-LH8" customClass="ThreeGameViewController" customModule="Guessing" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qWi-L0-WVx">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wP9-yb-aKd">
+                                <rect key="frame" x="60" y="153" width="273" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="RQ4-qw-1lh"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите имя актера" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iWT-ny-bfb">
+                                <rect key="frame" x="60" y="382" width="273" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d3Q-Fa-7Qg">
+                                <rect key="frame" x="143.66666666666666" y="443" width="106" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Ответитть"/>
+                                <connections>
+                                    <action selector="answerButtonTapped:" destination="xQV-iW-LH8" eventType="touchUpInside" id="SIr-VK-9ep"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="WQW-PM-9dN"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="iWT-ny-bfb" firstAttribute="leading" secondItem="WQW-PM-9dN" secondAttribute="leading" constant="60" id="8Zh-Zd-BwL"/>
+                            <constraint firstItem="d3Q-Fa-7Qg" firstAttribute="centerX" secondItem="iWT-ny-bfb" secondAttribute="centerX" id="HtW-cw-LR5"/>
+                            <constraint firstItem="WQW-PM-9dN" firstAttribute="trailing" secondItem="wP9-yb-aKd" secondAttribute="trailing" constant="60" id="QYY-JK-8dR"/>
+                            <constraint firstItem="iWT-ny-bfb" firstAttribute="top" secondItem="wP9-yb-aKd" secondAttribute="bottom" constant="29" id="Zek-fS-40k"/>
+                            <constraint firstItem="wP9-yb-aKd" firstAttribute="leading" secondItem="WQW-PM-9dN" secondAttribute="leading" constant="60" id="li4-zD-T2n"/>
+                            <constraint firstItem="d3Q-Fa-7Qg" firstAttribute="top" secondItem="iWT-ny-bfb" secondAttribute="bottom" constant="27" id="n0Z-LI-S9V"/>
+                            <constraint firstItem="wP9-yb-aKd" firstAttribute="top" secondItem="WQW-PM-9dN" secondAttribute="top" constant="50" id="oVY-yk-aRD"/>
+                            <constraint firstItem="WQW-PM-9dN" firstAttribute="trailing" secondItem="iWT-ny-bfb" secondAttribute="trailing" constant="60" id="yAm-4B-pyH"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="3Ts-Dn-hwo"/>
+                    <connections>
+                        <outlet property="actorImage" destination="wP9-yb-aKd" id="FRt-83-SFM"/>
+                        <outlet property="nameActorTF" destination="iWT-ny-bfb" id="fry-nq-h72"/>
+                        <segue destination="5sS-dw-2MJ" kind="presentation" identifier="goThreeResult" id="czh-BC-51l"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MJf-We-CKb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3153.75" y="1495.7746478873239"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="jz8-za-3kJ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dud-gr-3xr" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ajg-9H-27q">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="WZH-pT-Eka" kind="relationship" relationship="rootViewController" id="ddW-Ir-3g3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3lD-Uh-hSz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="100" y="-727"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="czh-BC-51l"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
