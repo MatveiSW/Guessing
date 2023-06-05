@@ -7,16 +7,16 @@
 
 struct Game {
     let gameNames: [String]
-    let developerNames: [String]
     let actorNames: [String]
     let rules: [String]
+    let resultActorGames: [String]
     
     static func getGame() -> Game {
         Game(
             gameNames: DataStore.shared.gameNames,
-            developerNames: DataStore.shared.developerNames,
             actorNames: DataStore.shared.actorNames,
-            rules: DataStore.shared.rules
+            rules: DataStore.shared.rules,
+            resultActorGames: DataStore.shared.resultActorGames
         )
     }
 }
