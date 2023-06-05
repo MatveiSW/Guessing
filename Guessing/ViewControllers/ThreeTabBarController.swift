@@ -21,6 +21,7 @@ class ThreeTabBarController: UITabBarController {
             } else {
                 guard let threeGameVC = viewController as? ThreeGameViewController else { return}
                 threeGameVC.game = game
+                
             }
         }
         
