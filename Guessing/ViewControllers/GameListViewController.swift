@@ -12,7 +12,7 @@ class GameListViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+        tableView.rowHeight = 100
     }
     let game = Game.getGame()
     
@@ -31,6 +31,7 @@ class GameListViewController: UITableViewController {
 
         var content = cell.defaultContentConfiguration()
         content.text = game.gameNames[indexPath.row]
+        content.image = UIImage(named: game.imageTableViewCell[indexPath.row])
         cell.contentConfiguration = content
 
         return cell
@@ -55,6 +56,10 @@ class GameListViewController: UITableViewController {
             guard let threeTabBarVC = segue.destination as? ThreeTabBarController else { return }
             threeTabBarVC.game = game
         }
+    }
+    
+    @IBAction func unwind(for unwindSegue: UIStoryboardSegue) {
+        
     }
     /*
     // Override to support conditional editing of the table view.
@@ -102,3 +107,5 @@ class GameListViewController: UITableViewController {
     */
 
 }
+
+
