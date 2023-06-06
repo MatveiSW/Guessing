@@ -8,22 +8,30 @@
 import UIKit
 
 class OneRulesViewController: UIViewController {
-
+    var game: Game!
+    
+    @IBOutlet var rulesOneGameLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        settingBackroundImage()
+        rulesOneGameLabel.text = game.rules.first
+        
     }
     
 
-    /*
-    // MARK: - Navigation
+   
+}
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+private extension OneRulesViewController {
+    func settingBackroundImage() {
+        let backroundImage = UIImageView(image: UIImage(named: "backgroundRules"))
+        backroundImage.frame = view.bounds
+        backroundImage.contentMode = .scaleAspectFill
+        backroundImage.alpha = 0.5
+        
+        view.addSubview(backroundImage)
+        view.sendSubviewToBack(backroundImage)
     }
-    */
-
 }
