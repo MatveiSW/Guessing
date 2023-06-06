@@ -11,14 +11,18 @@ struct Game {
     let rules: [String]
     let resultActorGames: [String]
     let ratingIMDB: [Float]
-    
+    let imageTableViewCell: [String]
+    let resultImage: [String]
+
     static func getGame() -> Game {
         Game(
             gameNames: DataStore.shared.gameNames,
             actorNames: DataStore.shared.actorNames,
             rules: DataStore.shared.rules,
             resultActorGames: DataStore.shared.resultActorGames,
-            ratingIMDB: DataStore.shared.ratingIMDB
+            ratingIMDB: DataStore.shared.ratingIMDB,
+            imageTableViewCell: DataStore.shared.imageTableViewCell,
+            resultImage: DataStore.shared.resultImage
         )
     }
 }

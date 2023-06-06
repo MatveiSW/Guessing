@@ -13,7 +13,6 @@ class ThreeGameViewController: UIViewController {
     
     @IBOutlet var nameActorTF: UITextField!
     
-    @IBOutlet var questionCount: UILabel!
     
     var game: Game!
     private var indexCount = 0
@@ -21,28 +20,37 @@ class ThreeGameViewController: UIViewController {
     private var currentAnswer = 0
     override func viewDidLoad() {
         super.viewDidLoad()
-      
+        
+        settingNavigationTitle()
         settingBackroundImage()
+        
         actorImage.image = UIImage(named: game.actorNames[indexCount])
         actorImage.alpha = 1.0
-        
-        questionCount.text = "Вопрос №\(indexCount + 1)/5"
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let resultVC = segue.destination as? ResultViewController else { return }
+        resultVC.threeGameResult = currentAnswer
+        resultVC.game = game
     }
     
     @IBAction func skipButtonTapped(_ sender: UIButton) {
         indexCount += 1
+        nameActorTF.text = ""
         if indexCount < game.actorNames.count {
+            settingNavigationTitle()
+            animation(image: actorImage)
             actorImage.image = UIImage(named: game.actorNames[indexCount])
+            navigationController?.navigationBar.topItem?.title = "Вопрос №\(indexCount + 1)/5"
         } else {
             performSegue(withIdentifier: "goThreeResult", sender: self)
         }
-        questionCount.text = "Вопрос №\(indexCount + 1)/5"
     }
     
     @IBAction func answerButtonTapped(_ sender: UIButton) {
         checkAnswer()
-        }
     }
+}
 
 
 private extension ThreeGameViewController {
@@ -50,7 +58,7 @@ private extension ThreeGameViewController {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default) { (_) in
             self.attemtCount -= 1
-            
+            self.nameActorTF.text = ""
             if self.attemtCount == 0 {
                 self.performSegue(withIdentifier: "goThreeResult", sender: nil)
             }
@@ -72,11 +80,14 @@ private extension ThreeGameViewController {
     func checkAnswer() {
         if indexCount < game.actorNames.count {
             if nameActorTF.text == game.actorNames[indexCount]  {
-                animation(image: actorImage)
                 indexCount += 1
-                questionCount.text = "Вопрос №\(indexCount + 1)/5"
+                currentAnswer += 1
+                nameActorTF.text = ""
                 if indexCount < game.actorNames.count {
+                    settingNavigationTitle()
+                    animation(image: actorImage)
                     actorImage.image = UIImage(named: game.actorNames[indexCount])
+                    navigationController?.navigationBar.topItem?.title = "Вопрос №\(indexCount + 1)/5"
                 } else {
                     performSegue(withIdentifier: "goThreeResult", sender: self)
                 }
@@ -104,5 +115,16 @@ private extension ThreeGameViewController {
         
         view.addSubview(backroundImage)
         view.sendSubviewToBack(backroundImage)
+    }
+}
+
+private extension ThreeGameViewController {
+    func settingNavigationTitle() {
+        navigationController?.navigationBar.topItem?.hidesBackButton = true
+        navigationController?.navigationBar.topItem?.largeTitleDisplayMode = .never
+           let titleLabel = UILabel()
+           titleLabel.text = "Вопрос №\(indexCount + 1)/5"
+           titleLabel.font = UIFont(name: "GillSans", size: 25)
+        navigationController?.navigationBar.topItem?.titleView = titleLabel
     }
 }
