@@ -13,11 +13,12 @@ class ThreeGameViewController: UIViewController {
     
     @IBOutlet var nameActorTF: UITextField!
     
-    
     var game: Game!
+    
     private var indexCount = 0
     private var attemtCount = 3
     private var currentAnswer = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -51,7 +52,6 @@ class ThreeGameViewController: UIViewController {
         checkAnswer()
     }
 }
-
 
 private extension ThreeGameViewController {
     func showAlert(withTitle title: String, andMessage message: String) {
@@ -122,9 +122,9 @@ private extension ThreeGameViewController {
     func settingNavigationTitle() {
         navigationController?.navigationBar.topItem?.hidesBackButton = true
         navigationController?.navigationBar.topItem?.largeTitleDisplayMode = .never
-           let titleLabel = UILabel()
-           titleLabel.text = "Вопрос №\(indexCount + 1)/5"
-           titleLabel.font = UIFont(name: "GillSans", size: 25)
+        let titleLabel = UILabel()
+        titleLabel.text = "Вопрос №\(indexCount + 1)/5"
+        titleLabel.font = UIFont(name: "GillSans", size: 25)
         navigationController?.navigationBar.topItem?.titleView = titleLabel
     }
 }
