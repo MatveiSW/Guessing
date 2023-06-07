@@ -55,6 +55,9 @@ class GameListViewController: UITableViewController {
         if segue.identifier == "threeGame" {
             guard let threeTabBarVC = segue.destination as? ThreeTabBarController else { return }
             threeTabBarVC.game = game
+        } else if segue.identifier == "twoGame" {
+            guard let twoTabBatVC = segue.destination as? TwoTabBarCotroller else { return }
+                twoTabBatVC.game = game
         } else if segue.identifier == "oneGame" {
             guard let oneTabBarVC = segue.destination as? OneTabBarController else { return }
             oneTabBarVC.game = game
