@@ -9,8 +9,8 @@ import UIKit
 
 class OneGameViewController: UIViewController {
     var game: Game!
-    var ingexCount = 0
-    
+    private var indexCount = 0
+    private var currentAnswer = 0
     @IBOutlet var ratingLabel: UILabel!
     @IBOutlet var filmImageView: UIImageView!
     @IBOutlet var sliderRating: UISlider!
@@ -18,24 +18,46 @@ class OneGameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         settingBackroundImage()
-        filmImageView.image = UIImage(named: String(game.ratingIMDB[ingexCount]))
+        settingNavigationTitle()
+        filmImageView.image = UIImage(named: String(game.ratingIMDB[indexCount]))
         sliderRaring()
         
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let resultVC = segue.destination as? ResultViewController else { return }
+        resultVC.threeGameResult = 0
+        resultVC.game = game
+    }
+    
     @IBAction func answerButtonTapped() {
-        let valueSlider = round(sliderRating.value * 10) / 10
-        
-        if valueSlider == game.ratingIMDB[ingexCount] {
-            ingexCount += 1
-            filmImageView.image = UIImage(named: String(game.ratingIMDB[ingexCount]))
-        }
+        checkAnswer()
+        settingNavigationTitle()
         
     }
     @IBAction func sliderRaring() {
         ratingLabel.text = String(format: "%.1f", sliderRating.value)
 
     }
+    
+    func checkAnswer() {
+        let valueSlider = round(sliderRating.value * 10) / 10
+        if indexCount < game.ratingIMDB.count {
+            if valueSlider == game.ratingIMDB[indexCount] {
+                indexCount += 1
+                filmImageView.image = UIImage(named: String(game.ratingIMDB[indexCount]))
+            } else if valueSlider > game.ratingIMDB[indexCount] {
+                showAlert(withTitle: "Не верно", andMessage: "Чуть меньше!")
+            } else {
+                showAlert(withTitle: "Не верно", andMessage: "Чуть больше!")
+            }
+        } else {
+            performSegue(withIdentifier: "goThreeResult", sender: self)
+        }
+    }
+    
+            
+        
     
     
     
@@ -56,5 +78,40 @@ private extension OneGameViewController {
         
         view.addSubview(backroundImage)
         view.sendSubviewToBack(backroundImage)
+    }
+    
+    func showAlert(withTitle title: String, andMessage message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+
+        let action = UIAlertAction(title: "OK", style: .default) { (action:UIAlertAction!) in
+        }
+
+        alert.addAction(action)
+
+        self.present(alert, animated: true, completion:nil)
+    }
+    
+    func settingNavigationTitle() {
+           let titleLabel = UILabel()
+           titleLabel.text = "Вопрос №\(indexCount + 1)/5"
+           titleLabel.font = UIFont(name: "GillSans", size: 25)
+        navigationController?.navigationBar.topItem?.titleView = titleLabel
+    }
+    
+    func checkAnswers() {
+        let valueSlider = round(sliderRating.value * 10) / 10
+        if indexCount < game.ratingIMDB.count {
+            if valueSlider == game.ratingIMDB[indexCount] {
+                indexCount += 1
+                filmImageView.image = UIImage(named: String(game.ratingIMDB[indexCount]))
+            } else if valueSlider > game.ratingIMDB[indexCount] {
+                showAlert(withTitle: "Не верно", andMessage: "Чуть меньше!")
+            } else {
+                showAlert(withTitle: "Не верно", andMessage: "Чуть больше!")
+            }
+        } else {
+            performSegue(withIdentifier: "goThreeResult", sender: self)
+        }
+        
     }
 }
