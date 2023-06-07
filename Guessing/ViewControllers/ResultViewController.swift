@@ -12,6 +12,7 @@ class ResultViewController: UIViewController {
     @IBOutlet var currentAnswerCountLabel: UILabel!
     @IBOutlet var resultLabel: UILabel!
     @IBOutlet var resultImage: UIImageView!
+    
     var game: Game!
     var threeGameResult: Int!
     
