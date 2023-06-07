@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dud-gr-3xr">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dud-gr-3xr">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -74,41 +73,57 @@
                                     <constraint firstAttribute="height" constant="200" id="IpQ-sj-T48"/>
                                 </constraints>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="YrO-ED-L7J">
-                                <rect key="frame" x="16" y="235" width="288" height="214"/>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="1QF-1l-Ljn">
+                                <rect key="frame" x="14" y="403" width="292" height="31"/>
+                                <connections>
+                                    <action selector="sliderRaring" destination="KL9-JU-C7l" eventType="valueChanged" id="bj7-ph-qoi"/>
+                                </connections>
+                            </slider>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="aN2-0L-tih">
+                                <rect key="frame" x="16" y="463" width="288" height="34.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sSd-o8-SkO">
-                                        <rect key="frame" x="0.0" y="0.0" width="288" height="48"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="1QF-1l-Ljn">
-                                        <rect key="frame" x="-2" y="83" width="292" height="49"/>
-                                        <connections>
-                                            <action selector="sliderRaring" destination="KL9-JU-C7l" eventType="valueChanged" id="bj7-ph-qoi"/>
-                                        </connections>
-                                    </slider>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zb0-wS-fva">
-                                        <rect key="frame" x="0.0" y="166" width="288" height="48"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ls0-lY-jus">
+                                        <rect key="frame" x="0.0" y="0.0" width="114" height="34.5"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Пропустить">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="skipButtonTapped" destination="KL9-JU-C7l" eventType="touchUpInside" id="z8L-i7-bhd"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zb0-wS-fva">
+                                        <rect key="frame" x="174" y="0.0" width="114" height="34.5"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Ответить"/>
                                         <connections>
                                             <action selector="answerButtonTapped" destination="KL9-JU-C7l" eventType="touchUpInside" id="9Ft-Z7-SNx"/>
                                         </connections>
                                     </button>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sSd-o8-SkO">
+                                <rect key="frame" x="16" y="336" width="288" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="aLR-Tz-2zS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="aLR-Tz-2zS" firstAttribute="trailing" secondItem="1QF-1l-Ljn" secondAttribute="trailing" constant="16" id="5Z6-NR-9h1"/>
                             <constraint firstItem="xtQ-UQ-OXW" firstAttribute="leading" secondItem="aLR-Tz-2zS" secondAttribute="leading" id="ELw-oh-bsb"/>
-                            <constraint firstItem="aLR-Tz-2zS" firstAttribute="bottom" secondItem="YrO-ED-L7J" secondAttribute="bottom" constant="70" id="MF3-PL-X2m"/>
+                            <constraint firstItem="aLR-Tz-2zS" firstAttribute="bottom" secondItem="aN2-0L-tih" secondAttribute="bottom" constant="21.5" id="K88-bu-I7n"/>
                             <constraint firstItem="xtQ-UQ-OXW" firstAttribute="top" secondItem="MZ1-X6-7KD" secondAttribute="top" constant="120" id="OXe-dB-Mp5"/>
-                            <constraint firstItem="aLR-Tz-2zS" firstAttribute="trailing" secondItem="YrO-ED-L7J" secondAttribute="trailing" constant="16" id="hlg-vi-T8f"/>
+                            <constraint firstItem="1QF-1l-Ljn" firstAttribute="leading" secondItem="aLR-Tz-2zS" secondAttribute="leading" constant="16" id="YyO-km-q9M"/>
+                            <constraint firstItem="aN2-0L-tih" firstAttribute="leading" secondItem="aLR-Tz-2zS" secondAttribute="leading" constant="16" id="ZEy-ln-1AS"/>
+                            <constraint firstItem="sSd-o8-SkO" firstAttribute="top" secondItem="xtQ-UQ-OXW" secondAttribute="bottom" constant="16" id="bpi-3t-GXo"/>
+                            <constraint firstItem="aLR-Tz-2zS" firstAttribute="trailing" secondItem="sSd-o8-SkO" secondAttribute="trailing" constant="16" id="gsK-Cd-3mv"/>
+                            <constraint firstItem="sSd-o8-SkO" firstAttribute="leading" secondItem="aLR-Tz-2zS" secondAttribute="leading" constant="16" id="gy8-Sb-GT0"/>
+                            <constraint firstItem="aLR-Tz-2zS" firstAttribute="trailing" secondItem="aN2-0L-tih" secondAttribute="trailing" constant="16" id="rgt-SK-xrO"/>
                             <constraint firstItem="xtQ-UQ-OXW" firstAttribute="trailing" secondItem="aLR-Tz-2zS" secondAttribute="trailing" id="unU-QM-tAG"/>
-                            <constraint firstItem="YrO-ED-L7J" firstAttribute="leading" secondItem="MZ1-X6-7KD" secondAttribute="leading" constant="16" id="urU-wp-AAJ"/>
+                            <constraint firstItem="aN2-0L-tih" firstAttribute="top" secondItem="1QF-1l-Ljn" secondAttribute="bottom" constant="30" id="vO6-tO-MIR"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Игра" image="gamecontroller.fill" catalog="system" id="Aov-Rk-sCc"/>
@@ -263,13 +278,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rulesThreeGame" translatesAutoresizingMaskIntoConstraints="NO" id="QnT-2C-ywK">
-                                <rect key="frame" x="0.0" y="112.5" width="320" height="200"/>
+                                <rect key="frame" x="0.0" y="92.5" width="320" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="STG-M4-qqa"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Правила третий игры" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Cf-ST-3hP">
-                                <rect key="frame" x="70" y="302.5" width="180" height="23"/>
+                                <rect key="frame" x="70" y="282.5" width="180" height="23"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -472,20 +487,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wP9-yb-aKd">
-                                <rect key="frame" x="0.0" y="112.5" width="320" height="320"/>
+                                <rect key="frame" x="0.0" y="92.5" width="320" height="320"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="320" id="RCt-uH-WAz"/>
                                 </constraints>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите имя актера" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iWT-ny-bfb">
-                                <rect key="frame" x="23" y="446.5" width="274" height="34"/>
+                                <rect key="frame" x="23" y="426.5" width="274" height="34"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d3Q-Fa-7Qg">
-                                <rect key="frame" x="199.5" y="495.5" width="97" height="35"/>
+                                <rect key="frame" x="199.5" y="475.5" width="97" height="35"/>
                                 <color key="backgroundColor" red="0.17216588399999999" green="0.69343115909999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
@@ -502,7 +517,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="43H-Ro-Dcg">
-                                <rect key="frame" x="23" y="495.5" width="115" height="35"/>
+                                <rect key="frame" x="23" y="475.5" width="115" height="35"/>
                                 <color key="backgroundColor" red="0.98488733248832894" green="0.47966100843736287" blue="0.53310548068685759" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
@@ -552,7 +567,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dud-gr-3xr" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="ajg-9H-27q">
-                        <rect key="frame" x="0.0" y="20" width="320" height="92.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="92.5"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -566,7 +581,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="czh-BC-51l"/>
+        <segue reference="YMa-xo-rvQ"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="272caf1f351fa6b8f81f2" width="1280" height="720"/>
