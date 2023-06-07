@@ -26,35 +26,29 @@ class OneGameViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let resultVC = segue.destination as? ResultViewController else { return }
-        resultVC.threeGameResult = 0
+        resultVC.oneGameResult = 0
         resultVC.game = game
     }
     
     @IBAction func answerButtonTapped() {
         checkAnswer()
         settingNavigationTitle()
-        
+    }
+    @IBAction func skipButtonTapped() {
+        if indexCount < game.ratingIMDB.count - 1 {
+            indexCount += 1
+            filmImageView.image = UIImage(named: String(game.ratingIMDB[indexCount]))
+        } else {
+            performSegue(withIdentifier: "goOneResult", sender: self)
+        }
+        settingNavigationTitle()
     }
     @IBAction func sliderRaring() {
         ratingLabel.text = String(format: "%.1f", sliderRating.value)
 
     }
     
-    func checkAnswer() {
-        let valueSlider = round(sliderRating.value * 10) / 10
-        if indexCount < game.ratingIMDB.count {
-            if valueSlider == game.ratingIMDB[indexCount] {
-                indexCount += 1
-                filmImageView.image = UIImage(named: String(game.ratingIMDB[indexCount]))
-            } else if valueSlider > game.ratingIMDB[indexCount] {
-                showAlert(withTitle: "Не верно", andMessage: "Чуть меньше!")
-            } else {
-                showAlert(withTitle: "Не верно", andMessage: "Чуть больше!")
-            }
-        } else {
-            performSegue(withIdentifier: "goThreeResult", sender: self)
-        }
-    }
+   
     
             
         
@@ -98,20 +92,19 @@ private extension OneGameViewController {
         navigationController?.navigationBar.topItem?.titleView = titleLabel
     }
     
-    func checkAnswers() {
-        let valueSlider = round(sliderRating.value * 10) / 10
-        if indexCount < game.ratingIMDB.count {
-            if valueSlider == game.ratingIMDB[indexCount] {
-                indexCount += 1
-                filmImageView.image = UIImage(named: String(game.ratingIMDB[indexCount]))
-            } else if valueSlider > game.ratingIMDB[indexCount] {
-                showAlert(withTitle: "Не верно", andMessage: "Чуть меньше!")
-            } else {
-                showAlert(withTitle: "Не верно", andMessage: "Чуть больше!")
-            }
+     func checkAnswer() {
+    let valueSlider = round(sliderRating.value * 10) / 10
+    if indexCount < game.ratingIMDB.count - 1 {
+        if valueSlider == game.ratingIMDB[indexCount] {
+            indexCount += 1
+            filmImageView.image = UIImage(named: String(game.ratingIMDB[indexCount]))
+        } else if valueSlider > game.ratingIMDB[indexCount] {
+            showAlert(withTitle: "Не верно", andMessage: "Чуть меньше!")
         } else {
-            performSegue(withIdentifier: "goThreeResult", sender: self)
+            showAlert(withTitle: "Не верно", andMessage: "Чуть больше!")
         }
-        
+    } else {
+        performSegue(withIdentifier: "goOneResult", sender: self)
     }
+}
 }

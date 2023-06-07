@@ -15,11 +15,12 @@ class ResultViewController: UIViewController {
     
     var game: Game!
     var threeGameResult: Int!
+    var oneGameResult: Int!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        getInfoResult()
-        currentAnswerCountLabel.text = "Ты правильно ответил на \(threeGameResult ?? 0) из 5 вопросов!"
+//        getInfoResult()
+//        currentAnswerCountLabel.text = "Ты правильно ответил на \(threeGameResult ?? 0) из 5 вопросов!"
         addBackroundColor()
     }
     private func getInfoResult() {
