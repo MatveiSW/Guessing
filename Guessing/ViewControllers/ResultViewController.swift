@@ -16,13 +16,13 @@ class ResultViewController: UIViewController {
     var game: Game!
     var threeGameResult: Int!
     var oneGameResult: Int!
-    
+    var numberGame = 0
     override func viewDidLoad() {
         super.viewDidLoad()
-//        getInfoResult()
-//        currentAnswerCountLabel.text = "Ты правильно ответил на \(threeGameResult ?? 0) из 5 вопросов!"
+        getResult()
         addBackroundColor()
     }
+  
     private func getInfoResult() {
         if threeGameResult <= 1 {
             resultLabel.text = "\(game.resultActorGames[0])"
@@ -50,4 +50,15 @@ extension ResultViewController {
         view.addSubview(backroundImage)
         view.sendSubviewToBack(backroundImage)
     }
+    func getResult() {
+          if numberGame == 1 {
+              resultLabel.text = "oneGame"
+          } else if numberGame == 2 {
+              resultLabel.text = "twoGame"
+          } else if numberGame == 3 {
+              getInfoResult()
+              currentAnswerCountLabel.text = "Ты правильно ответил на \(threeGameResult ?? 0) из 5 вопросов!"
+          }
+    }
 }
+
