@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dud-gr-3xr">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dud-gr-3xr">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -147,28 +146,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="04g-kf-3sS">
-                                <rect key="frame" x="46" y="398" width="228" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CSG-SC-RbK">
+                                <rect key="frame" x="30" y="468" width="260" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="a5h-QV-qqG"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Выбрать игру!">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="31"/>
-                                </buttonConfiguration>
+                                <buttonConfiguration key="configuration" style="plain"/>
                                 <connections>
-                                    <segue destination="Ezx-rJ-nsA" kind="show" id="49y-6r-jzJ"/>
+                                    <action selector="buttonTapped:" destination="WZH-pT-Eka" eventType="touchUpInside" id="QqM-1q-LT2"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ANj-et-SAx"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="CSG-SC-RbK" firstAttribute="leading" secondItem="ANj-et-SAx" secondAttribute="leading" constant="30" id="0rQ-MD-RfY"/>
+                            <constraint firstItem="ANj-et-SAx" firstAttribute="bottom" secondItem="CSG-SC-RbK" secondAttribute="bottom" constant="30" id="6l2-Pi-9vg"/>
+                            <constraint firstItem="ANj-et-SAx" firstAttribute="trailing" secondItem="CSG-SC-RbK" secondAttribute="trailing" constant="30" id="fml-6m-g4s"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="CiH-GN-zC1">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="doc" catalog="system" id="aXG-wo-ly9">
                             <connections>
-                                <segue destination="CR4-tL-D2s" kind="show" id="JSk-mQ-xVr"/>
+                                <segue destination="CR4-tL-D2s" kind="show" identifier="" id="JSk-mQ-xVr"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="Ezx-rJ-nsA" kind="show" identifier="toGameList" id="Zai-td-f1L"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hud-WG-o1r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -199,7 +206,7 @@
             </objects>
             <point key="canvasLocation" x="1994.6564885496182" y="-727.46478873239437"/>
         </scene>
-        <!--Угадайка-->
+        <!--Игры-->
         <scene sceneID="aED-Uw-ukL">
             <objects>
                 <tableViewController id="Ezx-rJ-nsA" customClass="GameListViewController" customModule="Guessing" customModuleProvider="target" sceneMemberID="viewController">
@@ -222,7 +229,7 @@
                             <outlet property="delegate" destination="Ezx-rJ-nsA" id="9rV-N0-cGt"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Угадайка" id="K8f-xn-p3y"/>
+                    <navigationItem key="navigationItem" title="Игры" id="K8f-xn-p3y"/>
                     <connections>
                         <segue destination="2fk-CN-h19" kind="show" identifier="oneGame" id="qOx-UL-hds"/>
                         <segue destination="9VT-J8-UpB" kind="show" identifier="twoGame" id="hOo-oM-PPW"/>
@@ -279,13 +286,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rulesThreeGame" translatesAutoresizingMaskIntoConstraints="NO" id="QnT-2C-ywK">
-                                <rect key="frame" x="0.0" y="112.5" width="320" height="200"/>
+                                <rect key="frame" x="0.0" y="92.5" width="320" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="STG-M4-qqa"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Правила третий игры" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Cf-ST-3hP">
-                                <rect key="frame" x="70" y="302.5" width="180" height="23"/>
+                                <rect key="frame" x="70" y="282.5" width="180" height="23"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -493,20 +500,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wP9-yb-aKd">
-                                <rect key="frame" x="0.0" y="112.5" width="320" height="320"/>
+                                <rect key="frame" x="0.0" y="92.5" width="320" height="320"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="320" id="RCt-uH-WAz"/>
                                 </constraints>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите имя актера" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iWT-ny-bfb">
-                                <rect key="frame" x="23" y="437.5" width="274" height="34"/>
+                                <rect key="frame" x="23" y="417.5" width="274" height="34"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d3Q-Fa-7Qg">
-                                <rect key="frame" x="199.5" y="486.5" width="97" height="35"/>
+                                <rect key="frame" x="199.5" y="466.5" width="97" height="35"/>
                                 <color key="backgroundColor" red="0.17216588399999999" green="0.69343115909999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
@@ -523,7 +530,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="43H-Ro-Dcg">
-                                <rect key="frame" x="23" y="486.5" width="115" height="35"/>
+                                <rect key="frame" x="23" y="466.5" width="115" height="35"/>
                                 <color key="backgroundColor" red="0.98488733248832894" green="0.47966100843736287" blue="0.53310548068685759" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
@@ -574,7 +581,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dud-gr-3xr" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="ajg-9H-27q">
-                        <rect key="frame" x="0.0" y="20" width="320" height="92.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="92.5"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -588,7 +595,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="czh-BC-51l"/>
+        <segue reference="YMa-xo-rvQ"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="272caf1f351fa6b8f81f2" width="1280" height="720"/>
