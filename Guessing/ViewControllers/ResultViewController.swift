@@ -52,7 +52,9 @@ extension ResultViewController {
     }
     func getResult() {
           if numberGame == 1 {
-              resultLabel.text = "oneGame"
+              resultLabel.text = "На сколько бы вопросов ты не ответил, ты крут! а сейчас сыграй в другую игру или просто возьми фильм из подборки и проведи вечер хорошо!"
+              resultImage.image = UIImage(named: "steaveJobs2")
+              currentAnswerCountLabel.text = "Тадам!"
           } else if numberGame == 2 {
               resultLabel.text = "twoGame"
           } else if numberGame == 3 {
