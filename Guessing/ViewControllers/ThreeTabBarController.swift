@@ -13,7 +13,6 @@ class ThreeTabBarController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         guard let viewControllers = viewControllers else { return }
         for viewController in viewControllers {
             if let threeRulesVC = viewController as? ThreeRulesViewController {
@@ -21,8 +20,8 @@ class ThreeTabBarController: UITabBarController {
             } else {
                 guard let threeGameVC = viewController as? ThreeGameViewController else { return}
                 threeGameVC.game = game
-                
             }
+            
         }
         
         

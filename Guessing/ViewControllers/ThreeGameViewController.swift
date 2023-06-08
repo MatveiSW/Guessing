@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ThreeGameViewController: UIViewController {
+class ThreeGameViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var actorImage: UIImageView!
     
@@ -28,11 +28,17 @@ class ThreeGameViewController: UIViewController {
         actorImage.image = UIImage(named: game.actorNames[indexCount])
         actorImage.alpha = 1.0
     }
-    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+   
+        view.endEditing(true)
+    }
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let resultVC = segue.destination as? ResultViewController else { return }
         resultVC.threeGameResult = currentAnswer
         resultVC.game = game
+        resultVC.numberGame = 3
     }
     
     @IBAction func skipButtonTapped(_ sender: UIButton) {
@@ -120,11 +126,7 @@ private extension ThreeGameViewController {
 
 private extension ThreeGameViewController {
     func settingNavigationTitle() {
-        navigationController?.navigationBar.topItem?.hidesBackButton = true
-        navigationController?.navigationBar.topItem?.largeTitleDisplayMode = .never
-        let titleLabel = UILabel()
-        titleLabel.text = "Вопрос №\(indexCount + 1)/5"
-        titleLabel.font = UIFont(name: "GillSans", size: 25)
-        navigationController?.navigationBar.topItem?.titleView = titleLabel
+navigationController?.navigationBar.topItem?.title = "Вопрос №\(indexCount + 1)/5"
+        
     }
 }
