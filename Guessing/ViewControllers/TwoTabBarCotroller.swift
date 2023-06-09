@@ -20,7 +20,7 @@ class TwoTabBarCotroller: UITabBarController {
             if let twoRulesVC = viewController as? TwoRulesViewController {
                 twoRulesVC.game = game
             } else {
-                guard let twoGameVC = viewController as? TwoRulesViewController else { return}
+                guard let twoGameVC = viewController as? TwoGameViewController else { return}
                 twoGameVC.game = game
                 
             }

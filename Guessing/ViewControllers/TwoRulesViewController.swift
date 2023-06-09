@@ -12,11 +12,15 @@ class TwoRulesViewController: UIViewController {
     
     var game: Game!
     
+    
+    @IBOutlet var rulesTextView: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         settingBackroundImage()
-        
+        rulesTextView.text = game.rules[1]
+        rulesTextView.backgroundColor = .clear
     }
     
 
