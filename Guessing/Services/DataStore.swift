@@ -32,6 +32,7 @@ class DataStore {
     
     let resultImage = ["Плохо", "Нормально", "Отлично"]
     
+    
     private init() { }
 }
 // Расширяй и используй этот файл в Models
