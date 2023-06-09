@@ -54,7 +54,7 @@ extension ResultViewController {
           if numberGame == 1 {
               resultLabel.text = "На сколько бы вопросов ты не ответил, ты крут! а сейчас сыграй в другую игру или просто возьми фильм из подборки и проведи вечер хорошо!"
               resultImage.image = UIImage(named: "steaveJobs2")
-              currentAnswerCountLabel.text = "Тадам!"
+              currentAnswerCountLabel.text = "Ты ответил на \(oneGameResult ?? 0) из 5"
           } else if numberGame == 2 {
               resultLabel.text = "twoGame"
           } else if numberGame == 3 {

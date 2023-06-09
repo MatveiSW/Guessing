@@ -29,6 +29,7 @@ class OneGameViewController: UIViewController {
         guard let resultVC = segue.destination as? ResultViewController else { return }
         resultVC.numberGame = 1
         resultVC.game = game
+        resultVC.oneGameResult = currentAnswer
     }
     
     @IBAction func answerButtonTapped() {
@@ -88,6 +89,7 @@ private extension OneGameViewController {
         if attemtCount > 1 {
             if valueSlider == game.ratingIMDB[indexCount] {
                 indexCount += 1
+                currentAnswer += 1
                 filmImageView.image = UIImage(named: String(game.ratingIMDB[indexCount]))
             } else if valueSlider > game.ratingIMDB[indexCount] {
                 attemtCount -= 1
@@ -96,10 +98,6 @@ private extension OneGameViewController {
                 attemtCount -= 1
                 showAlert(withTitle: "Осталось \(attemtCount) попытки", andMessage: "Чуть больше!")
             }
-//        } else if valueSlider > game.ratingIMDB[indexCount] {
-//            showAlert(withTitle: "Не верно", andMessage: "Чуть меньше!")
-//        } else {
-//            showAlert(withTitle: "Не верно", andMessage: "Чуть больше!")
         } else {
             performSegue(withIdentifier: "goOneResult", sender: self)
         }
