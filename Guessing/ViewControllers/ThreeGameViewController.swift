@@ -9,8 +9,8 @@ import UIKit
 
 class ThreeGameViewController: UIViewController, UITextFieldDelegate {
     
+    @IBOutlet var gameProgressView: UIProgressView!
     @IBOutlet var actorImage: UIImageView!
-    
     @IBOutlet var nameActorTF: UITextField!
     
     var game: Game!
@@ -18,7 +18,7 @@ class ThreeGameViewController: UIViewController, UITextFieldDelegate {
     private var indexCount = 0
     private var attemtCount = 3
     private var currentAnswer = 0
-    
+    private var progress: Float = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -43,6 +43,8 @@ class ThreeGameViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func skipButtonTapped(_ sender: UIButton) {
         indexCount += 1
+        progress += 0.2
+        gameProgressView.setProgress(progress, animated: true)
         nameActorTF.text = ""
         if indexCount < game.actorNames.count {
             settingNavigationTitle()
@@ -88,6 +90,8 @@ private extension ThreeGameViewController {
             if nameActorTF.text == game.actorNames[indexCount]  {
                 indexCount += 1
                 currentAnswer += 1
+                progress += 0.2
+                gameProgressView.setProgress(progress, animated: true)
                 nameActorTF.text = ""
                 if indexCount < game.actorNames.count {
                     settingNavigationTitle()
