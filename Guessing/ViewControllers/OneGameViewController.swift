@@ -11,6 +11,7 @@ class OneGameViewController: UIViewController {
     var game: Game!
     private var indexCount = 0
     private var currentAnswer = 0
+    private var attemtCount = 3
     @IBOutlet var ratingLabel: UILabel!
     @IBOutlet var filmImageView: UIImageView!
     @IBOutlet var sliderRating: UISlider!
@@ -28,6 +29,7 @@ class OneGameViewController: UIViewController {
         guard let resultVC = segue.destination as? ResultViewController else { return }
         resultVC.numberGame = 1
         resultVC.game = game
+        resultVC.oneGameResult = currentAnswer
     }
     
     @IBAction func answerButtonTapped() {
@@ -35,6 +37,7 @@ class OneGameViewController: UIViewController {
         settingNavigationTitle()
     }
     @IBAction func skipButtonTapped() {
+       
         if indexCount < game.ratingIMDB.count - 1 {
             indexCount += 1
             filmImageView.image = UIImage(named: String(game.ratingIMDB[indexCount]))
@@ -47,19 +50,7 @@ class OneGameViewController: UIViewController {
         ratingLabel.text = String(format: "%.1f", sliderRating.value)
 
     }
-    
-   
-    
-            
-        
-    
-    
-    
-    
-    
-    
-    
-    
+
     
 }
 
@@ -95,13 +86,20 @@ private extension OneGameViewController {
      func checkAnswer() {
     let valueSlider = round(sliderRating.value * 10) / 10
     if indexCount < game.ratingIMDB.count - 1 {
-        if valueSlider == game.ratingIMDB[indexCount] {
-            indexCount += 1
-            filmImageView.image = UIImage(named: String(game.ratingIMDB[indexCount]))
-        } else if valueSlider > game.ratingIMDB[indexCount] {
-            showAlert(withTitle: "Не верно", andMessage: "Чуть меньше!")
+        if attemtCount > 1 {
+            if valueSlider == game.ratingIMDB[indexCount] {
+                indexCount += 1
+                currentAnswer += 1
+                filmImageView.image = UIImage(named: String(game.ratingIMDB[indexCount]))
+            } else if valueSlider > game.ratingIMDB[indexCount] {
+                attemtCount -= 1
+                showAlert(withTitle: "Осталось \(attemtCount) попытки", andMessage: "Чуть меньше!")
+            } else {
+                attemtCount -= 1
+                showAlert(withTitle: "Осталось \(attemtCount) попытки", andMessage: "Чуть больше!")
+            }
         } else {
-            showAlert(withTitle: "Не верно", andMessage: "Чуть больше!")
+            performSegue(withIdentifier: "goOneResult", sender: self)
         }
     } else {
         performSegue(withIdentifier: "goOneResult", sender: self)
