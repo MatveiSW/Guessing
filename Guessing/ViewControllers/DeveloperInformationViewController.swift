@@ -39,11 +39,15 @@ class DeveloperInformationViewController: UIViewController {
         settingBackround()
     }
     
-    func settingBackround() {
+    @IBAction func clouseButton(_ sender: UIButton) {
+        dismiss(animated: true)
+    }
+    
+    private func settingBackround() {
         let backroundImage = UIImageView(image: UIImage(named: "backroundImageGameVC"))
         backroundImage.frame = view.bounds
         backroundImage.contentMode = .scaleAspectFill
-        backroundImage.alpha = 0.3
+        backroundImage.alpha = 0.1
         
         view.addSubview(backroundImage)
         view.sendSubviewToBack(backroundImage)

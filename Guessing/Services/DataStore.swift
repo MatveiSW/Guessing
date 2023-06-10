@@ -35,7 +35,7 @@ class DataStore {
     
     let developerNames = ["Залман", "Денис", "Матвей"]
     let developerSurnames = ["Зотеев", "Акишин", "Авдеев"]
-    let developerAge = ["0", "1", "2"]
+    let developerAge = ["28", "25", "20"]
     let developerTelegram = ["@ZZZalman", "@deenozaw", "@lolwrrr"]
     let developerImage = ["oneImage", "twoImage", "threeImage"]
     private init() { }
