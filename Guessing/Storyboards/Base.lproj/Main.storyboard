@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dud-gr-3xr">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -157,15 +158,6 @@
                                     <action selector="buttonTapped:" destination="WZH-pT-Eka" eventType="touchUpInside" id="QqM-1q-LT2"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SaR-hR-PF4">
-                                <rect key="frame" x="123" y="267" width="75" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                                <connections>
-                                    <segue destination="izs-VW-nPC" kind="presentation" id="6P9-p6-RYA"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ANj-et-SAx"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -175,14 +167,7 @@
                             <constraint firstItem="ANj-et-SAx" firstAttribute="trailing" secondItem="CSG-SC-RbK" secondAttribute="trailing" constant="30" id="fml-6m-g4s"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="CiH-GN-zC1">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="icons8-папки-66" id="aXG-wo-ly9">
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <connections>
-                                <segue destination="CR4-tL-D2s" kind="show" identifier="Authors" id="JSk-mQ-xVr"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="CiH-GN-zC1"/>
                     <connections>
                         <segue destination="Ezx-rJ-nsA" kind="show" identifier="toGameList" id="Zai-td-f1L"/>
                     </connections>
@@ -191,28 +176,12 @@
             </objects>
             <point key="canvasLocation" x="1051.875" y="-727.81690140845069"/>
         </scene>
-        <!--Разработчики-->
-        <scene sceneID="cjK-5p-GqM">
-            <objects>
-                <viewController id="CR4-tL-D2s" customClass="PeopleInfoViewController" customModule="Guessing" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="z01-Xt-Zq1">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="G7p-di-MGN"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Разработчики" id="8OJ-fo-YRe"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="PHf-6p-DZI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1993.125" y="-727.81690140845069"/>
-        </scene>
         <!--Developer Information View Controller-->
         <scene sceneID="qgG-gh-xqB">
             <objects>
                 <viewController id="egO-sS-lki" customClass="DeveloperInformationViewController" customModule="Guessing" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FmL-ID-yyK">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Ak7-u3-c8b">
@@ -319,55 +288,6 @@
             </objects>
             <point key="canvasLocation" x="2836.875" y="0.0"/>
         </scene>
-        <!--Second Developer View Controller-->
-        <scene sceneID="FSq-bC-6xX">
-            <objects>
-                <viewController id="kZe-U1-aLN" customClass="SecondDeveloperViewController" customModule="Guessing" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="662-4E-gDQ">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Second" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ucz-YA-BEv">
-                                <rect key="frame" x="139" y="253" width="58" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="A5R-Mz-gj9"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="ux3-YU-SGn"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yzl-2z-3Ph" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3605.625" y="0.0"/>
-        </scene>
-        <!--Third Developer View Controller-->
-        <scene sceneID="oy4-Tw-LRi">
-            <objects>
-                <viewController id="JQN-mI-UdW" customClass="ThirdDeveloperViewController" customModule="Guessing" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="nkx-8s-cHx">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Third" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hc2-q1-0wW">
-                                <rect key="frame" x="139" y="274" width="40" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="OYW-mk-Lj6"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jjK-wB-GTl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4336.875" y="0.0"/>
-        </scene>
         <!--Игры-->
         <scene sceneID="aED-Uw-ukL">
             <objects>
@@ -391,7 +311,19 @@
                             <outlet property="delegate" destination="Ezx-rJ-nsA" id="9rV-N0-cGt"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Игры" id="K8f-xn-p3y"/>
+                    <navigationItem key="navigationItem" title="Игры" id="K8f-xn-p3y">
+                        <barButtonItem key="rightBarButtonItem" image="person.3.fill" catalog="system" style="plain" id="7YC-dG-gZc">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="SaR-hR-PF4">
+                                <rect key="frame" x="229" y="7.5" width="75" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <segue destination="izs-VW-nPC" kind="presentation" id="6P9-p6-RYA"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="2fk-CN-h19" kind="show" identifier="oneGame" id="qOx-UL-hds"/>
                         <segue destination="9VT-J8-UpB" kind="show" identifier="twoGame" id="hOo-oM-PPW"/>
@@ -407,7 +339,7 @@
             <objects>
                 <tableViewController id="izs-VW-nPC" customClass="AuthorTableViewController" customModule="Guessing" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="aSE-IL-LhU">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
@@ -911,7 +843,7 @@
         <image name="book.fill" catalog="system" width="128" height="95"/>
         <image name="gamecontroller" catalog="system" width="128" height="79"/>
         <image name="gamecontroller.fill" catalog="system" width="128" height="79"/>
-        <image name="icons8-папки-66" width="66" height="66"/>
+        <image name="person.3.fill" catalog="system" width="128" height="61"/>
         <image name="pictureRule" width="1200" height="675"/>
         <image name="rulesThreeGame" width="1600" height="631"/>
         <image name="secondGameVCRules" width="960" height="1873"/>
