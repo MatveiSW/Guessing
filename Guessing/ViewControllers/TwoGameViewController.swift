@@ -53,7 +53,7 @@ final class TwoGameViewController: UIViewController {
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
             }
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-                self.showAlert(withTitle: "Wrong answer", andMessage: "You have \(self.attemptCount - 1) attempts left")
+                self.showAlert(withTitle: "❗️Неверный ответ❗️", andMessage: "У вас осталось \(self.attemptCount - 1) попытки(а)")
             }
         }
     }

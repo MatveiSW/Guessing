@@ -14,7 +14,6 @@ final class ResultViewController: UIViewController {
     @IBOutlet var currentAnswerCountLabel: UILabel!
     @IBOutlet var resultLabel: UILabel!
     @IBOutlet var resultImage: UIImageView!
-    @IBOutlet var playAgainButton: UIButton!
     
     //MARK: - Properties
     var game: Game!
