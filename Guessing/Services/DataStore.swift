@@ -10,6 +10,7 @@ class DataStore {
     
     let gameNames = ["Угадай рейтинг фильма", "Угадай фильм по обложке", "Угадай актера по фото"] // Напиши название своей игры
     let developerNames = ["Залман Зотеев", "Денис Акишин", "Матвей Авдеев"] // Напиши свое имя
+    let gameDevelopers = ["Разработчик 1-ой игры", "Разработчик 2-ой игры", "Разработчик 3-ий игры"]
     let actorNames = ["Джейсон Стейтем", "Вин Дизель", "Уилл Смит", "Пол Уокер", "Дуэйн Джонсон"]
     let movieNames = ["Shawshank", "Inception", "GodFather", "FightClub", "SchindlerList"]
     let moviePictures = ["Shawshank", "Inception", "GodFather", "FightClub", "SchindlerList"]
@@ -29,7 +30,7 @@ class DataStore {
         "Твои знания великолепны, мы почти уверены, что ты не подсматривал). Может проверишь свои знания музыки?"
     ]
     let imageTableViewCell = ["oneGamePicture", "twoGamePicture", "threeGamePicture"]
-    
+    let developersImageTableViewCell = ["firstDeveloper", "secondDeveloper", "thirdDeveloper"]
     let resultImage = ["Плохо", "Нормально", "Отлично"]
     
     

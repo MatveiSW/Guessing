@@ -36,22 +36,22 @@ final class TwoGameViewController: UIViewController {
     @IBAction func answerButtonPressed(_ sender: UIButton) {
         guard let buttonText = sender.titleLabel?.text else { return }
         
-        if buttonText == game.movieNames[questionIndex] {
-            sender.tintColor = .systemGreen
-            correctAnswers += 1
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-                self.nextQuestion()
-            }
-        } else {
-            sender.tintColor = .systemRed
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-            }
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-                self.showAlert(withTitle: "Wrong answer", andMessage: "You have \(self.attemptCount - 1) attempts left")
-            }
+        
+            if buttonText == game.movieNames[questionIndex] {
+                sender.tintColor = .systemGreen
+                correctAnswers += 1
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                    self.nextQuestion()
+                }
+            } else {
+                sender.tintColor = .systemRed
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                    self.showAlert(withTitle: "Wrong answer", andMessage: "You have \(self.attemptCount - 1) attempts left")
+                }
             
         }
-        
     }
 }
 
