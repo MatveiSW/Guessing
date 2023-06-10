@@ -68,7 +68,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="272caf1f351fa6b8f81f2" translatesAutoresizingMaskIntoConstraints="NO" id="xtQ-UQ-OXW">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xtQ-UQ-OXW">
                                 <rect key="frame" x="0.0" y="120" width="320" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="IpQ-sj-T48"/>
@@ -850,10 +850,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="czh-BC-51l"/>
+        <segue reference="YMa-xo-rvQ"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="272caf1f351fa6b8f81f2" width="1280" height="720"/>
         <image name="Matvei" width="640" height="640"/>
         <image name="book.fill" catalog="system" width="128" height="95"/>
         <image name="gamecontroller.fill" catalog="system" width="128" height="79"/>
