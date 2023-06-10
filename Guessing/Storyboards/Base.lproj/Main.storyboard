@@ -83,8 +83,9 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="aN2-0L-tih">
                                 <rect key="frame" x="16" y="463" width="288" height="34.5"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ls0-lY-jus">
+                                    <button opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ls0-lY-jus">
                                         <rect key="frame" x="0.0" y="0.0" width="114" height="34.5"/>
+                                        <color key="tintColor" systemColor="tintColor"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Пропустить">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
@@ -93,8 +94,9 @@
                                             <action selector="skipButtonTapped" destination="KL9-JU-C7l" eventType="touchUpInside" id="z8L-i7-bhd"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zb0-wS-fva">
+                                    <button opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zb0-wS-fva">
                                         <rect key="frame" x="174" y="0.0" width="114" height="34.5"/>
+                                        <color key="tintColor" red="0.19706421029999999" green="0.47738064409999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Ответить"/>
                                         <connections>
@@ -269,11 +271,11 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iK2-LB-XmF">
-                                <rect key="frame" x="16" y="20" width="288" height="51"/>
+                                <rect key="frame" x="16" y="20" width="288" height="43"/>
                                 <color key="tintColor" red="0.98488733250000005" green="0.329634019" blue="0.26314282309999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Закрыть">
-                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="31"/>
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="24"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="clouseButton:" destination="egO-sS-lki" eventType="touchUpInside" id="PJP-tU-6P7"/>
@@ -394,22 +396,22 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="azr-Ip-oYS">
-                                <rect key="frame" x="16" y="373" width="288" height="160.5"/>
+                                <rect key="frame" x="16" y="373" width="288" height="162"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Правила второй игры!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d7d-Mh-JHb">
-                                        <rect key="frame" x="0.0" y="0.0" width="288" height="26.5"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="28"/>
+                                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="24"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Правила второй игры!" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="kxt-0F-VQw">
-                                        <rect key="frame" x="0.0" y="30.5" width="288" height="130"/>
+                                        <rect key="frame" x="0.0" y="32" width="288" height="130"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="130" id="pVY-xW-sq1"/>
                                         </constraints>
                                         <color key="textColor" systemColor="labelColor"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
+                                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                 </subviews>
@@ -468,7 +470,7 @@
                             <constraint firstItem="5Cf-ST-3hP" firstAttribute="leading" secondItem="yFP-Kf-bUi" secondAttribute="leading" constant="70" id="ryh-Ua-F6T"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Правила" image="book" catalog="system" id="XuG-MW-xse"/>
+                    <tabBarItem key="tabBarItem" title="Правила" image="book.fill" catalog="system" id="XuG-MW-xse"/>
                     <navigationItem key="navigationItem" id="E59-al-lxq"/>
                     <connections>
                         <outlet property="rulesGameLabel" destination="5Cf-ST-3hP" id="zCn-Cr-SbC"/>
@@ -557,7 +559,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="H4w-KL-GId">
                                         <rect key="frame" x="0.0" y="0.0" width="310" height="86"/>
                                         <subviews>
-                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0wH-Vu-QXP">
+                                            <button opaque="NO" alpha="0.90000000000000002" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0wH-Vu-QXP">
                                                 <rect key="frame" x="0.0" y="0.0" width="151.5" height="86"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="9kA-3T-Vep"/>
@@ -569,7 +571,7 @@
                                                     <action selector="answerButtonPressed:" destination="C7Y-vK-OZ0" eventType="touchUpInside" id="lSk-iw-jer"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gmn-1z-6Bx">
+                                            <button opaque="NO" alpha="0.90000000000000002" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gmn-1z-6Bx">
                                                 <rect key="frame" x="158.5" y="0.0" width="151.5" height="86"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="85" id="c0V-kU-obI"/>
@@ -586,7 +588,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="rRM-Ty-I7L">
                                         <rect key="frame" x="0.0" y="91" width="310" height="86"/>
                                         <subviews>
-                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bGo-Au-Gyg">
+                                            <button opaque="NO" alpha="0.90000000000000002" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bGo-Au-Gyg">
                                                 <rect key="frame" x="0.0" y="0.0" width="151.5" height="86"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="85" id="0ip-Xz-tqK"/>
@@ -598,7 +600,7 @@
                                                     <action selector="answerButtonPressed:" destination="C7Y-vK-OZ0" eventType="touchUpInside" id="gpA-el-KjE"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dpi-E0-KbY">
+                                            <button opaque="NO" alpha="0.90000000000000002" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dpi-E0-KbY">
                                                 <rect key="frame" x="158.5" y="0.0" width="151.5" height="86"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="85" id="IXh-Wv-xti"/>
@@ -815,7 +817,7 @@
                             <constraint firstItem="wP9-yb-aKd" firstAttribute="top" secondItem="WQW-PM-9dN" secondAttribute="top" id="wgy-4f-354"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Игра" image="gamecontroller" catalog="system" id="3Ts-Dn-hwo"/>
+                    <tabBarItem key="tabBarItem" title="Игра" image="gamecontroller.fill" catalog="system" id="3Ts-Dn-hwo"/>
                     <navigationItem key="navigationItem" id="0Wn-Ye-R7H"/>
                     <connections>
                         <outlet property="actorImage" destination="wP9-yb-aKd" id="FRt-83-SFM"/>
@@ -848,14 +850,12 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Qs1-oV-1aj"/>
+        <segue reference="czh-BC-51l"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="272caf1f351fa6b8f81f2" width="1280" height="720"/>
         <image name="Matvei" width="640" height="640"/>
-        <image name="book" catalog="system" width="128" height="99"/>
         <image name="book.fill" catalog="system" width="128" height="95"/>
-        <image name="gamecontroller" catalog="system" width="128" height="79"/>
         <image name="gamecontroller.fill" catalog="system" width="128" height="79"/>
         <image name="person.3.fill" catalog="system" width="128" height="61"/>
         <image name="pictureRule" width="1200" height="675"/>
@@ -866,6 +866,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

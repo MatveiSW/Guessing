@@ -31,7 +31,7 @@ class AuthorTableViewController: UITableViewController {
     
         var content = cell.defaultContentConfiguration()
         content.text = game.gameDevelopers[indexPath.row]
-        content.image = UIImage(named: game.developerImage[indexPath.row])
+        content.image = UIImage(named: game.developersImageTableViewCell[indexPath.row])
         
         cell.contentConfiguration = content
 
