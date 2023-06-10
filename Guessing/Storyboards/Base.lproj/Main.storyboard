@@ -692,6 +692,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WMn-4m-cBc">
                                         <rect key="frame" x="173" y="0.0" width="47" height="34.5"/>
+                                        <color key="backgroundColor" red="0.20897034349999999" green="0.3094231375" blue="0.65721803899999998" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="cO9-2u-9d9"/>
                                         </constraints>
@@ -728,6 +729,7 @@
                     <navigationItem key="navigationItem" id="jhE-a9-35P"/>
                     <connections>
                         <outlet property="currentAnswerCountLabel" destination="iEa-Tm-pPJ" id="S0K-yH-hGY"/>
+                        <outlet property="playAgainButton" destination="WMn-4m-cBc" id="Sp0-W5-cK8"/>
                         <outlet property="resultImage" destination="luq-fA-6bc" id="ec7-lf-a79"/>
                         <outlet property="resultLabel" destination="6ba-VV-DxC" id="2mh-gG-Eej"/>
                     </connections>

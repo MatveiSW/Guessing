@@ -9,10 +9,17 @@ import UIKit
 
 final class ResultViewController: UIViewController {
     
+    
+    
     //MARK: - IBOutlets
+    
     @IBOutlet var currentAnswerCountLabel: UILabel!
     @IBOutlet var resultLabel: UILabel!
     @IBOutlet var resultImage: UIImageView!
+    @IBOutlet var playAgainButton: UIButton!
+    
+    
+    
     
     //MARK: - Properties
     var game: Game!
@@ -26,6 +33,7 @@ final class ResultViewController: UIViewController {
         super.viewDidLoad()
         getResult()
         addBackroundColor()
+        playAgainButton.layer.cornerRadius = 15
     }
     
     //MARK: - Private functions
