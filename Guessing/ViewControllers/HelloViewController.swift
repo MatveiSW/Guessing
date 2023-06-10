@@ -9,7 +9,7 @@ import UIKit
 
 final class HelloViewController: UIViewController {
     
-    //MARK: - Override functions
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         settingButtonStart()
@@ -17,7 +17,7 @@ final class HelloViewController: UIViewController {
     }
 }
 
-//MARK: - Extenstion for Hello
+
 private extension HelloViewController {
     func settingButtonStart() {
         

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ThreeTabBarController: UITabBarController {
+final class ThreeTabBarController: UITabBarController {
     
     var game: Game!
     

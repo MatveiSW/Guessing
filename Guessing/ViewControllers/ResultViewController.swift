@@ -7,23 +7,36 @@
 
 import UIKit
 
-class ResultViewController: UIViewController {
+final class ResultViewController: UIViewController {
+    
+    
+    
+    //MARK: - IBOutlets
     
     @IBOutlet var currentAnswerCountLabel: UILabel!
     @IBOutlet var resultLabel: UILabel!
     @IBOutlet var resultImage: UIImageView!
+    @IBOutlet var playAgainButton: UIButton!
     
+    
+    
+    
+    //MARK: - Properties
     var game: Game!
     var threeGameResult: Int!
     var oneGameResult: Int!
     var twoGameResult: Int!
     var numberGame = 0
+    
+    //MARK: - Override functions
     override func viewDidLoad() {
         super.viewDidLoad()
         getResult()
         addBackroundColor()
+        playAgainButton.layer.cornerRadius = 15
     }
-  
+    
+    //MARK: - Private functions
     private func getInfoResult() {
         if threeGameResult <= 1 {
             resultLabel.text = "\(game.resultActorGames[0])"
@@ -36,7 +49,7 @@ class ResultViewController: UIViewController {
             resultImage.image = UIImage(named: game.resultImage[2])
         }
     }
-
+    
     private func secondGameResult() {
         if twoGameResult <= 1 {
             resultLabel.text = "\(game.guessTheMovie[0])"
@@ -49,10 +62,10 @@ class ResultViewController: UIViewController {
             resultImage.image = UIImage(named: game.secondGameImages[2])
         }
     }
-
+    
 }
 
-extension ResultViewController {
+private extension ResultViewController {
     func addBackroundColor() {
         let backroundImage = UIImageView(image: UIImage(named: "resultBackround"))
         backroundImage.frame = view.bounds
@@ -63,17 +76,17 @@ extension ResultViewController {
         view.sendSubviewToBack(backroundImage)
     }
     func getResult() {
-          if numberGame == 1 {
-              resultLabel.text = "На сколько бы вопросов ты не ответил, ты крут! а сейчас сыграй в другую игру или просто возьми фильм из подборки и проведи вечер хорошо!"
-              resultImage.image = UIImage(named: "steaveJobs2")
-              currentAnswerCountLabel.text = "Ты ответил на \(oneGameResult ?? 0) вопросов из 5"
-          } else if numberGame == 2 {
-              secondGameResult()
-              currentAnswerCountLabel.text = "Ты правильно ответил на \(twoGameResult ?? 0) из 5 вопросов!"
-          } else if numberGame == 3 {
-              getInfoResult()
-              currentAnswerCountLabel.text = "Ты правильно ответил на \(threeGameResult ?? 0) из 5 вопросов!"
-          }
+        if numberGame == 1 {
+            resultLabel.text = "На сколько бы вопросов ты не ответил, ты крут! А сейчас сыграй в другую игру или просто возьми фильм из подборки и проведи вечер хорошо!"
+            resultImage.image = UIImage(named: "steaveJobs2")
+            currentAnswerCountLabel.text = "Ты ответил на \(oneGameResult ?? 0) вопросов из 5"
+        } else if numberGame == 2 {
+            secondGameResult()
+            currentAnswerCountLabel.text = "Ты правильно ответил на \(twoGameResult ?? 0) из 5 вопросов!"
+        } else if numberGame == 3 {
+            getInfoResult()
+            currentAnswerCountLabel.text = "Ты правильно ответил на \(threeGameResult ?? 0) из 5 вопросов!"
+        }
     }
 }
 

@@ -7,18 +7,17 @@
 
 import UIKit
 
-class DeveloperInformationViewController: UIViewController {
+final class DeveloperInformationViewController: UIViewController {
 
-    
-    
+    //MARK: - IBOutlets
     @IBOutlet var developerImage: UIImageView!
-    
-    
+
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var surnameLabel: UILabel!
     @IBOutlet var ageLabel: UILabel!
     @IBOutlet var telegramLabel: UILabel!
     
+    //MARK: - Properties
     var game: Game!
     var name: String!
     var surname: String!
@@ -39,10 +38,6 @@ class DeveloperInformationViewController: UIViewController {
         settingBackround()
     }
     
-    @IBAction func clouseButton(_ sender: UIButton) {
-        dismiss(animated: true)
-    }
-    
     private func settingBackround() {
         let backroundImage = UIImageView(image: UIImage(named: "backroundImageGameVC"))
         backroundImage.frame = view.bounds
@@ -52,15 +47,5 @@ class DeveloperInformationViewController: UIViewController {
         view.addSubview(backroundImage)
         view.sendSubviewToBack(backroundImage)
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

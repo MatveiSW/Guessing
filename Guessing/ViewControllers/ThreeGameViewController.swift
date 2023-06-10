@@ -7,33 +7,36 @@
 
 import UIKit
 
-class ThreeGameViewController: UIViewController, UITextFieldDelegate {
+final class ThreeGameViewController: UIViewController, UITextFieldDelegate {
     
+    //MARK: - IBOutlets
     @IBOutlet var gameProgressView: UIProgressView!
     @IBOutlet var actorImage: UIImageView!
     @IBOutlet var nameActorTF: UITextField!
     
+    //MARK: - Properties
     var game: Game!
     
     private var indexCount = 0
     private var attemtCount = 3
     private var currentAnswer = 0
     private var progress: Float = 0
+    
+    //MARK: - Override functions
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         settingNavigationTitle()
         settingBackroundImage()
         
         actorImage.image = UIImage(named: game.actorNames[indexCount])
         actorImage.alpha = 1.0
     }
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
-   
         view.endEditing(true)
     }
-
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let resultVC = segue.destination as? ResultViewController else { return }
         resultVC.threeGameResult = currentAnswer
@@ -41,6 +44,7 @@ class ThreeGameViewController: UIViewController, UITextFieldDelegate {
         resultVC.numberGame = 3
     }
     
+    //MARK: - IBActions
     @IBAction func skipButtonTapped(_ sender: UIButton) {
         indexCount += 1
         progress += 0.2
@@ -130,7 +134,7 @@ private extension ThreeGameViewController {
 
 private extension ThreeGameViewController {
     func settingNavigationTitle() {
-navigationController?.navigationBar.topItem?.title = "Вопрос №\(indexCount + 1)/5"
+        navigationController?.navigationBar.topItem?.title = "Вопрос №\(indexCount + 1)/5"
         
     }
 }
