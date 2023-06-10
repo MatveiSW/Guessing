@@ -18,7 +18,6 @@
 		2BC3713A2A2C9EC4004D45E2 /* ThreeGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC371392A2C9EC4004D45E2 /* ThreeGameViewController.swift */; };
 		2BC3713C2A2CA3AF004D45E2 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC3713B2A2CA3AF004D45E2 /* ResultViewController.swift */; };
 		2BC3713E2A2CA5BE004D45E2 /* HelloViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC3713D2A2CA5BE004D45E2 /* HelloViewController.swift */; };
-		2BC371402A2CA5D9004D45E2 /* PeopleInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC3713F2A2CA5D9004D45E2 /* PeopleInfoViewController.swift */; };
 		2BC3714C2A2CA841004D45E2 /* ThreeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC3714B2A2CA841004D45E2 /* ThreeTabBarController.swift */; };
 		2BC371502A2CA873004D45E2 /* TwoTabBarCotroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC3714F2A2CA873004D45E2 /* TwoTabBarCotroller.swift */; };
 		2BC371522A2CA884004D45E2 /* OneTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC371512A2CA884004D45E2 /* OneTabBarController.swift */; };
@@ -45,7 +44,6 @@
 		2BC371392A2C9EC4004D45E2 /* ThreeGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeGameViewController.swift; sourceTree = "<group>"; };
 		2BC3713B2A2CA3AF004D45E2 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		2BC3713D2A2CA5BE004D45E2 /* HelloViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloViewController.swift; sourceTree = "<group>"; };
-		2BC3713F2A2CA5D9004D45E2 /* PeopleInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleInfoViewController.swift; sourceTree = "<group>"; };
 		2BC3714B2A2CA841004D45E2 /* ThreeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeTabBarController.swift; sourceTree = "<group>"; };
 		2BC3714F2A2CA873004D45E2 /* TwoTabBarCotroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoTabBarCotroller.swift; sourceTree = "<group>"; };
 		2BC371512A2CA884004D45E2 /* OneTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneTabBarController.swift; sourceTree = "<group>"; };
@@ -129,7 +127,6 @@
 			isa = PBXGroup;
 			children = (
 				2BC3713D2A2CA5BE004D45E2 /* HelloViewController.swift */,
-				2BC3713F2A2CA5D9004D45E2 /* PeopleInfoViewController.swift */,
 				2BC371332A2C9E62004D45E2 /* GameListViewController.swift */,
 				2BC371512A2CA884004D45E2 /* OneTabBarController.swift */,
 				2BC371352A2C9EA4004D45E2 /* OneGameViewController.swift */,
@@ -237,7 +234,6 @@
 				2BC371542A2CAA3D004D45E2 /* DataStore.swift in Sources */,
 				2BC3715A2A2CB7E5004D45E2 /* OneRulesViewController.swift in Sources */,
 				2BC371202A2C9DE0004D45E2 /* AppDelegate.swift in Sources */,
-				2BC371402A2CA5D9004D45E2 /* PeopleInfoViewController.swift in Sources */,
 				2BC371362A2C9EA4004D45E2 /* OneGameViewController.swift in Sources */,
 				2BC3713C2A2CA3AF004D45E2 /* ResultViewController.swift in Sources */,
 				2BC371342A2C9E62004D45E2 /* GameListViewController.swift in Sources */,
