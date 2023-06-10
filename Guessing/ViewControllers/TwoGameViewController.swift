@@ -32,10 +32,16 @@ final class TwoGameViewController: UIViewController {
         settingNavigationTitle()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let resultVC = segue.destination as? ResultViewController else { return }
+        resultVC.twoGameResult = correctAnswers
+        resultVC.game = game
+        resultVC.numberGame = 2
+    }
+    
     //MARK: - IBActions
     @IBAction func answerButtonPressed(_ sender: UIButton) {
         guard let buttonText = sender.titleLabel?.text else { return }
-        
         
             if buttonText == game.movieNames[questionIndex] {
                 sender.tintColor = .systemGreen
@@ -91,6 +97,8 @@ private extension TwoGameViewController {
         let currentMoviePicture = game.moviePictures[questionIndex]
         movieImage.image = UIImage(named: currentMoviePicture)
         
+        settingNavigationTitle()
+        
         answerButtons.forEach { $0.tintColor = .systemBlue }
         
         showSingleButtonAnswer(with: game.movieNames)
@@ -125,6 +133,7 @@ private extension TwoGameViewController {
      func nextQuestion() {
         questionIndex += 1
         
+         
         if questionIndex < game.movieNames.count{
             updateUI()
             return

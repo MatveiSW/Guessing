@@ -16,6 +16,7 @@ class ResultViewController: UIViewController {
     var game: Game!
     var threeGameResult: Int!
     var oneGameResult: Int!
+    var twoGameResult: Int!
     var numberGame = 0
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +37,18 @@ class ResultViewController: UIViewController {
         }
     }
 
-   
+    private func secondGameResult() {
+        if twoGameResult <= 1 {
+            resultLabel.text = "\(game.guessTheMovie[0])"
+            resultImage.image = UIImage(named: game.secondGameImages[0])
+        } else if twoGameResult <= 3 {
+            resultLabel.text = "\(game.guessTheMovie[1])"
+            resultImage.image = UIImage(named: game.secondGameImages[1])
+        } else if twoGameResult <= 5 {
+            resultLabel.text = "\(game.guessTheMovie[2])"
+            resultImage.image = UIImage(named: game.secondGameImages[2])
+        }
+    }
 
 }
 
@@ -56,7 +68,8 @@ extension ResultViewController {
               resultImage.image = UIImage(named: "steaveJobs2")
               currentAnswerCountLabel.text = "Ты ответил на \(oneGameResult ?? 0) вопросов из 5"
           } else if numberGame == 2 {
-              resultLabel.text = "twoGame"
+              secondGameResult()
+              currentAnswerCountLabel.text = "Ты правильно ответил на \(twoGameResult ?? 0) из 5 вопросов!"
           } else if numberGame == 3 {
               getInfoResult()
               currentAnswerCountLabel.text = "Ты правильно ответил на \(threeGameResult ?? 0) из 5 вопросов!"
