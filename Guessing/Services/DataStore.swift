@@ -29,9 +29,12 @@ class DataStore {
         "Да ты крут! Так держать, а сможешь угадать рейтинг фильма по его обложке?",
         "Твои знания великолепны, мы почти уверены, что ты не подсматривал). Может проверишь свои знания музыки?"
     ]
+    let guessTheMovie = ["вое знание фильмов оставляет желать лучшего, но не стоит расстраиваться! Ты всегда можешь попробовать еще раз",
+    "Неплохо! Но можно ещё лучше! Попробуй ещё раз, чтобы получить максимальный результат!", "Вот это даааа! Теперь тебя смело можно назвать Киногуру!"]
     let imageTableViewCell = ["oneGamePicture", "twoGamePicture", "threeGamePicture"]
     let developersImageTableViewCell = ["firstDeveloper", "secondDeveloper", "thirdDeveloper"]
     let resultImage = ["Плохо", "Нормально", "Отлично"]
+    let secondGameImages = ["badResult", "notBadResult", "topResult"]
     
     let developerNames = ["Залман", "Денис", "Матвей"]
     let developerSurnames = ["Зотеев", "Акишин", "Авдеев"]

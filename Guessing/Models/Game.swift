@@ -12,10 +12,12 @@ struct Game {
     let actorNames: [String]
     let rules: [String]
     let resultActorGames: [String]
+    let guessTheMovie: [String]
     let ratingIMDB: [Float]
     let imageTableViewCell: [String]
     let developersImageTableViewCell: [String]
     let resultImage: [String]
+    let secondGameImages: [String]
     let movieNames: [String]
     let moviePictures: [String]
    
@@ -32,10 +34,12 @@ struct Game {
             actorNames: DataStore.shared.actorNames,
             rules: DataStore.shared.rules,
             resultActorGames: DataStore.shared.resultActorGames,
+            guessTheMovie: DataStore.shared.guessTheMovie,
             ratingIMDB: DataStore.shared.ratingIMDB,
             imageTableViewCell: DataStore.shared.imageTableViewCell,
             developersImageTableViewCell: DataStore.shared.developersImageTableViewCell,
             resultImage: DataStore.shared.resultImage,
+            secondGameImages: DataStore.shared.secondGameImages,
             movieNames: DataStore.shared.movieNames,
             moviePictures: DataStore.shared.moviePictures,
             developerSurnames: DataStore.shared.developerSurnames,
