@@ -7,7 +7,7 @@
 
 import UIKit
 
-class OneGameViewController: UIViewController {
+final class OneGameViewController: UIViewController {
     var game: Game!
     private var indexCount = 0
     private var currentAnswer = 0
