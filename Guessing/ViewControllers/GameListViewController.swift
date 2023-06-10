@@ -9,15 +9,16 @@ import UIKit
 
 final class GameListViewController: UITableViewController {
     
-    //MARK: - Properties
+    
     let game = Game.getGame()
     
-    //MARK: - Override functions
+
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.rowHeight = 100
     }
     
+    // MARK: - Table view data source
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "threeGame" {
             guard let threeTabBarVC = segue.destination as? ThreeTabBarController else { return }
