@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dud-gr-3xr">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -213,7 +212,7 @@
             <objects>
                 <viewController id="egO-sS-lki" customClass="DeveloperInformationViewController" customModule="Guessing" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FmL-ID-yyK">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Ak7-u3-c8b">
@@ -310,10 +309,10 @@
                     <navigationItem key="navigationItem" id="Sks-BR-1BL"/>
                     <connections>
                         <outlet property="ageLabel" destination="RJT-tu-zRm" id="hwb-3H-ewf"/>
-                        <outlet property="countryLabel" destination="dVi-z9-wh7" id="9gi-gC-91O"/>
                         <outlet property="developerImage" destination="l88-cP-AsL" id="Nna-9R-IPB"/>
                         <outlet property="nameLabel" destination="ssM-9M-otu" id="UMg-Xe-GB5"/>
                         <outlet property="surnameLabel" destination="uHw-Hl-Cjh" id="gue-FS-jlb"/>
+                        <outlet property="telegramLabel" destination="dVi-z9-wh7" id="9gi-gC-91O"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yZM-Cd-C1Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -408,7 +407,7 @@
             <objects>
                 <tableViewController id="izs-VW-nPC" customClass="AuthorTableViewController" customModule="Guessing" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="aSE-IL-LhU">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>

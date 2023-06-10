@@ -44,9 +44,9 @@ class AuthorTableViewController: UITableViewController {
         case 0:
             performSegue(withIdentifier: "developerInformation", sender: nil)
         case 1:
-            performSegue(withIdentifier: "secondDeveloper", sender: nil)
+            performSegue(withIdentifier: "developerInformation", sender: nil)
         case 2:
-            performSegue(withIdentifier: "thirdDeveloper", sender: nil)
+            performSegue(withIdentifier: "developerInformation", sender: nil)
         default:
             break
         }
@@ -56,6 +56,11 @@ class AuthorTableViewController: UITableViewController {
         
         guard let developVC = segue.destination as? DeveloperInformationViewController else { return }
         developVC.name = game.developerNames[indexPath.row]
+        developVC.surname = game.developerSurnames[indexPath.row]
+        developVC.age = game.developerAge[indexPath.row]
+        developVC.telegram = game.developerTelegram[indexPath.row]
+        developVC.image = game.developerImage[indexPath.row]
+        
     }
 
 //    @IBAction func unwind(for unwindSegue: UIStoryboardSegue) {

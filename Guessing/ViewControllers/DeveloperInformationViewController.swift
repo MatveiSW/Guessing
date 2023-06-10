@@ -17,24 +17,28 @@ class DeveloperInformationViewController: UIViewController {
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var surnameLabel: UILabel!
     @IBOutlet var ageLabel: UILabel!
-    @IBOutlet var countryLabel: UILabel!
+    @IBOutlet var telegramLabel: UILabel!
     
     var game: Game!
     var name: String!
     var surname: String!
-    var age: Int!
-    var country: String!
+    var age: String!
+    var telegram: String!
+    var image: String!
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         nameLabel.text = name
-//        developerImage.layer.cornerRadius = developerImage.frame.size.width / 2
-//        developerImage.clipsToBounds = true
+        surnameLabel.text = surname
+        ageLabel.text = age
+        telegramLabel.text = telegram
+        developerImage.image = UIImage(named: image)
         
         settingBackround()
     }
+    
     func settingBackround() {
         let backroundImage = UIImageView(image: UIImage(named: "backroundImageGameVC"))
         backroundImage.frame = view.bounds
