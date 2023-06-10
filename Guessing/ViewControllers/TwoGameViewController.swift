@@ -62,16 +62,13 @@ private extension TwoGameViewController {
 
         
         let okAction = UIAlertAction(title: "OK", style: .default) { (_) in
-            self.nextQuestion()
+            self.attemptCount -= 1
+            if self.attemptCount == 0 {
+                self.performSegue(withIdentifier: "goTwoResult", sender: nil)
+            } else {
+                self.nextQuestion()
+            }
         }
-//        { (_) in
-//            self.attemptCount -= 1
-//            if self.attemptCount == 0 {
-//                self.performSegue(withIdentifier: "goTwoResult", sender: nil)
-//            } else {
-//                self.nextQuestion()
-//            }
-//        }
         
         alert.addAction(okAction)
         present(alert, animated: true)
