@@ -7,21 +7,17 @@
 
 import UIKit
 
-class OneRulesViewController: UIViewController {
+final class OneRulesViewController: UIViewController {
+    
     var game: Game!
     
     @IBOutlet var rulesOneGameLabel: UILabel!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         settingBackroundImage()
         rulesOneGameLabel.text = game.rules.first
-        
     }
-    
-
-   
 }
 
 private extension OneRulesViewController {
