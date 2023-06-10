@@ -11,7 +11,7 @@ class AuthorTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         tableView.rowHeight = 100
     }
     let game = Game.getGame()
@@ -28,10 +28,11 @@ class AuthorTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "authors", for: indexPath)
-
+    
         var content = cell.defaultContentConfiguration()
         content.text = game.gameDevelopers[indexPath.row]
-        content.image = UIImage(named: game.developersImageTableViewCell[indexPath.row])
+        content.image = UIImage(named: game.developerImage[indexPath.row])
+        
         cell.contentConfiguration = content
 
         return cell

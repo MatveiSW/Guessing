@@ -262,6 +262,11 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="l88-cP-AsL" secondAttribute="height" multiplier="288:233" id="9kn-NX-XIB"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hFW-FN-0Ee"/>
