@@ -22,7 +22,7 @@ class GameListViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return game.gameNames.count
+        return game.gameNames.count  // Можно обойтись без ретурн
     }
 
     

@@ -27,6 +27,10 @@
 		2BC3715A2A2CB7E5004D45E2 /* OneRulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC371592A2CB7E5004D45E2 /* OneRulesViewController.swift */; };
 		2BC3715C2A2CB7F0004D45E2 /* TwoRulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC3715B2A2CB7F0004D45E2 /* TwoRulesViewController.swift */; };
 		2BC3715E2A2CB7F8004D45E2 /* ThreeRulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC3715D2A2CB7F8004D45E2 /* ThreeRulesViewController.swift */; };
+		84EB1F322A34468B00F67636 /* AuthorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EB1F312A34468B00F67636 /* AuthorTableViewController.swift */; };
+		84EB1F342A344F9800F67636 /* DeveloperInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EB1F332A344F9800F67636 /* DeveloperInformationViewController.swift */; };
+		84EB1F362A344FA400F67636 /* SecondDeveloperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EB1F352A344FA400F67636 /* SecondDeveloperViewController.swift */; };
+		84EB1F382A344FAF00F67636 /* ThirdDeveloperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EB1F372A344FAF00F67636 /* ThirdDeveloperViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +56,10 @@
 		2BC371592A2CB7E5004D45E2 /* OneRulesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneRulesViewController.swift; sourceTree = "<group>"; };
 		2BC3715B2A2CB7F0004D45E2 /* TwoRulesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoRulesViewController.swift; sourceTree = "<group>"; };
 		2BC3715D2A2CB7F8004D45E2 /* ThreeRulesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeRulesViewController.swift; sourceTree = "<group>"; };
+		84EB1F312A34468B00F67636 /* AuthorTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorTableViewController.swift; sourceTree = "<group>"; };
+		84EB1F332A344F9800F67636 /* DeveloperInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperInformationViewController.swift; sourceTree = "<group>"; };
+		84EB1F352A344FA400F67636 /* SecondDeveloperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondDeveloperViewController.swift; sourceTree = "<group>"; };
+		84EB1F372A344FAF00F67636 /* ThirdDeveloperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdDeveloperViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +145,10 @@
 				2BC371392A2C9EC4004D45E2 /* ThreeGameViewController.swift */,
 				2BC3715D2A2CB7F8004D45E2 /* ThreeRulesViewController.swift */,
 				2BC3713B2A2CA3AF004D45E2 /* ResultViewController.swift */,
+				84EB1F312A34468B00F67636 /* AuthorTableViewController.swift */,
+				84EB1F332A344F9800F67636 /* DeveloperInformationViewController.swift */,
+				84EB1F352A344FA400F67636 /* SecondDeveloperViewController.swift */,
+				84EB1F372A344FAF00F67636 /* ThirdDeveloperViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -229,13 +241,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BC371542A2CAA3D004D45E2 /* DataStore.swift in Sources */,
+				84EB1F382A344FAF00F67636 /* ThirdDeveloperViewController.swift in Sources */,
 				2BC3715A2A2CB7E5004D45E2 /* OneRulesViewController.swift in Sources */,
 				2BC371202A2C9DE0004D45E2 /* AppDelegate.swift in Sources */,
+				84EB1F362A344FA400F67636 /* SecondDeveloperViewController.swift in Sources */,
 				2BC371402A2CA5D9004D45E2 /* PeopleInfoViewController.swift in Sources */,
 				2BC371362A2C9EA4004D45E2 /* OneGameViewController.swift in Sources */,
 				2BC3713C2A2CA3AF004D45E2 /* ResultViewController.swift in Sources */,
 				2BC371342A2C9E62004D45E2 /* GameListViewController.swift in Sources */,
 				2BC371222A2C9DE0004D45E2 /* SceneDelegate.swift in Sources */,
+				84EB1F322A34468B00F67636 /* AuthorTableViewController.swift in Sources */,
 				2BC371522A2CA884004D45E2 /* OneTabBarController.swift in Sources */,
 				2BC371382A2C9EB7004D45E2 /* TwoGameViewController.swift in Sources */,
 				2BC371572A2CABD2004D45E2 /* Game.swift in Sources */,
@@ -245,6 +260,7 @@
 				2BC3713E2A2CA5BE004D45E2 /* HelloViewController.swift in Sources */,
 				2BC371502A2CA873004D45E2 /* TwoTabBarCotroller.swift in Sources */,
 				2BC3715E2A2CB7F8004D45E2 /* ThreeRulesViewController.swift in Sources */,
+				84EB1F342A344F9800F67636 /* DeveloperInformationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -33,7 +33,7 @@ private extension TwoRulesViewController {
         let backroundImage = UIImageView(image: UIImage(named: "RulesVCBackground"))
         backroundImage.frame = view.bounds
         backroundImage.contentMode = .scaleAspectFill
-        backroundImage.alpha = 0.3
+        backroundImage.alpha = 0.1
         
         view.addSubview(backroundImage)
         view.sendSubviewToBack(backroundImage)
