@@ -20,8 +20,7 @@ final class TwoRulesViewController: UIViewController {
         rulesTextView.text = game.rules[1]
         rulesTextView.backgroundColor = .clear
     }
-    @IBAction func unwind(for unwindSegue: UIStoryboardSegue) {
-    }
+  
 }
 
 private extension TwoRulesViewController {

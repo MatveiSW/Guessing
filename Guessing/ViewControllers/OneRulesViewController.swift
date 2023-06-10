@@ -18,8 +18,7 @@ final class OneRulesViewController: UIViewController {
         settingBackroundImage()
         rulesOneGameLabel.text = game.rules.first
     }
-    @IBAction func unwind(for unwindSegue: UIStoryboardSegue) {
-    }
+    
 }
 
 private extension OneRulesViewController {
