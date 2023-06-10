@@ -7,13 +7,11 @@
 
 import UIKit
 
-class TwoRulesViewController: UIViewController {
-
-    
-    var game: Game!
-    
+final class TwoRulesViewController: UIViewController {
     
     @IBOutlet var rulesTextView: UITextView!
+    
+    var game: Game!
     
     override func viewDidLoad() {
         super.viewDidLoad()

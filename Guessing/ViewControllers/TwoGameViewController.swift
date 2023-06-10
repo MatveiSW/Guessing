@@ -14,7 +14,6 @@ final class TwoGameViewController: UIViewController {
     @IBOutlet var movieImage: UIImageView!
     @IBOutlet var answerButtons: [UIButton]!
     
-    
     //MARK: - Properties
     var game: Game!
     
@@ -56,7 +55,6 @@ final class TwoGameViewController: UIViewController {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
                     self.showAlert(withTitle: "Wrong answer", andMessage: "You have \(self.attemptCount - 1) attempts left")
                 }
-            
         }
     }
 }
@@ -66,7 +64,6 @@ private extension TwoGameViewController {
     func showAlert(withTitle title: String, andMessage message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
 
-        
         let okAction = UIAlertAction(title: "OK", style: .default) { (_) in
             self.attemptCount -= 1
             if self.attemptCount == 0 {
@@ -88,6 +85,13 @@ private extension TwoGameViewController {
         
         view.addSubview(backroundImage)
         view.sendSubviewToBack(backroundImage)
+    }
+    
+    func settingNavigationTitle() {
+        let titleLabel = UILabel()
+        titleLabel.text = "Вопрос № \(questionIndex + 1)/ \(game.movieNames.count)"
+        titleLabel.font = UIFont(name: "GillSans", size: 35)
+        navigationController?.navigationBar.topItem?.titleView = titleLabel
     }
     
     func updateUI() {
@@ -133,19 +137,11 @@ private extension TwoGameViewController {
      func nextQuestion() {
         questionIndex += 1
         
-         
         if questionIndex < game.movieNames.count{
             updateUI()
             return
         }
-        
         performSegue(withIdentifier: "goTwoResult", sender: nil)
     }
-    
-    func settingNavigationTitle() {
-        let titleLabel = UILabel()
-        titleLabel.text = "Вопрос № \(questionIndex + 1)/ \(game.movieNames.count)"
-        titleLabel.font = UIFont(name: "GillSans", size: 35)
-        navigationController?.navigationBar.topItem?.titleView = titleLabel
-    }
+
 }
