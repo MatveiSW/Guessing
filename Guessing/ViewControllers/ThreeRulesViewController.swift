@@ -19,8 +19,7 @@ final class ThreeRulesViewController: UIViewController {
         rulesGameLabel.text = game.rules.last
     }
     
-    @IBAction func unwind(for unwindSegue: UIStoryboardSegue) {
-    }
+  
 }
 
 private extension ThreeRulesViewController {

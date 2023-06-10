@@ -676,7 +676,7 @@
                                 <rect key="frame" x="50" y="458" width="220" height="34.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xlg-hS-KKB">
-                                        <rect key="frame" x="0.0" y="0.0" width="165" height="34.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="220" height="34.5"/>
                                         <color key="backgroundColor" red="1" green="0.92233495582390967" blue="0.38363172910023002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
@@ -687,20 +687,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <segue destination="kA5-ue-0oC" kind="unwind" unwindAction="unwindFor:" id="cyX-PU-Qq7"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WMn-4m-cBc">
-                                        <rect key="frame" x="173" y="0.0" width="47" height="34.5"/>
-                                        <color key="backgroundColor" red="0.20897034349999999" green="0.3094231375" blue="0.65721803899999998" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="cO9-2u-9d9"/>
-                                        </constraints>
-                                        <color key="tintColor" red="0.20897034349999999" green="0.3094231375" blue="0.65721803899999998" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" image="arrow.clockwise" catalog="system"/>
-                                        <connections>
-                                            <segue destination="kA5-ue-0oC" kind="unwind" unwindAction="unwindFor:" id="D6r-KE-fJc"/>
+                                            <segue destination="kA5-ue-0oC" kind="unwind" unwindAction="unwindFor:" id="Gdp-zk-kP0"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -729,7 +716,6 @@
                     <navigationItem key="navigationItem" id="jhE-a9-35P"/>
                     <connections>
                         <outlet property="currentAnswerCountLabel" destination="iEa-Tm-pPJ" id="S0K-yH-hGY"/>
-                        <outlet property="playAgainButton" destination="WMn-4m-cBc" id="Sp0-W5-cK8"/>
                         <outlet property="resultImage" destination="luq-fA-6bc" id="ec7-lf-a79"/>
                         <outlet property="resultLabel" destination="6ba-VV-DxC" id="2mh-gG-Eej"/>
                     </connections>
@@ -850,10 +836,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="czh-BC-51l"/>
+        <segue reference="YMa-xo-rvQ"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="arrow.clockwise" catalog="system" width="113" height="128"/>
         <image name="book.fill" catalog="system" width="128" height="95"/>
         <image name="gamecontroller.fill" catalog="system" width="128" height="79"/>
         <image name="person.3.fill" catalog="system" width="128" height="61"/>

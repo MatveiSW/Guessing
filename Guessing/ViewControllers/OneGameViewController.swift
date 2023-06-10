@@ -37,6 +37,7 @@ final class OneGameViewController: UIViewController {
         resultVC.oneGameResult = currentAnswer
     }
     
+    
     //MARK: - IBActions
     @IBAction func answerButtonTapped() {
         checkAnswer()
@@ -56,6 +57,7 @@ final class OneGameViewController: UIViewController {
     @IBAction func sliderRaring() {
         ratingLabel.text = String(format: "%.1f", sliderRating.value)
     }
+    
 }
 
 //MARK: - Extension for OneGameViewController
